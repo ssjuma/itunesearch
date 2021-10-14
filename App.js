@@ -182,7 +182,7 @@ function App(){
       <ScrollView style={{backgroundColor: '#fff'}} contentContainerStyle={{minHeight: height, paddingBottom: 200, marginBottom: 200}}>
 
           <View style={styles.searchInputWrapper}>
-              <TextInput placeholder={'Search'} placeholderTextColor={'#999'} onChangeText={(text)=>searchList(text)} value={keyword} style={[styles.searchInput, {paddingLeft: 60}]} />
+              <TextInput placeholder={'Filter'} placeholderTextColor={'#999'} onChangeText={(text)=>searchList(text)} value={keyword} style={[styles.searchInput, {paddingLeft: 60}]} />
               <TouchableOpacity onPress={()=>keyword?clearSearch():searchMedia()} style={[styles.searchIcon, styles.searchIcon2]}>
                   <MaterialCommunityIcons name={keyword?'close':'magnify'} size={30} color={'red'} />
               </TouchableOpacity>
@@ -221,7 +221,7 @@ function App(){
                     </View>
                     <View style={styles.searchInputWrapper}>
                         <TextInput placeholder={'Enter search term'} placeholderTextColor={'#999'} onEndEditing={()=>searchMedia()} onChangeText={(text)=>setTerm(text)} value={term} style={styles.searchInput} />
-                        <TouchableOpacity onPress={()=>searchMedia()} style={[styles.searchIcon, styles.searchIcon]}>
+                        <TouchableOpacity onPress={()=>searchMedia()} style={[styles.searchIcon, styles.searchIcon1]}>
                             <MaterialCommunityIcons name={'magnify'} size={30} color={'red'} />
                         </TouchableOpacity>
                     </View>
